@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Zone - Profit Pulse</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Practice Zone</h1>
+        <button id="backButton" class="back-button">
+            <img src="1.png" alt="Back" class="back-icon">
+        </button>
+    </header>
+
+    <div class="practice-zone-container">
+        <!-- Stock Search Section -->
+        <div class="stock-search">
+            <label for="stock_symbol">Stock Symbol:</label>
+            <input type="text" id="stock_symbol" placeholder="Enter Symbol (e.g., AAPL)">
+            <button onclick="fetchStockPrice()">Search</button>
+        </div>
+
+        <!-- Display Stock Information and Balance -->
+        <div id="stock-info" class="stock-info">
+            <p id="current-price">Current Price: --</p>
+            <p id="balance-display">Balance: ₹10000</p>
+        </div>
+
+        <!-- Buy/Sell Controls -->
+        <div class="trade-controls">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" value="1" min="1">
+            <button onclick="buyStock()">Buy</button>
+            <button onclick="sellStock()">Sell</button>
+        </div>
+
+        <!-- Transaction History Section -->
+        <div id="transaction-history" class="transaction-history">
+            <h3>Transaction History</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <!-- Portfolio Section -->
+<div id="portfolio" class="portfolio">
+    <h3>Your Portfolio</h3>
+    <div id="portfolio-cards" class="portfolio-cards">
+        <!-- Portfolio cards will be dynamically added here -->
+    </div>
+</div>
+
+
+    <script src="practice-zone.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
+

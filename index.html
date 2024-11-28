@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Pulse Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="dailyContent.js" defer></script>
+    <script src="tutorialcarousel.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Bootstrap CSS -->
+
+
+<!-- Optional JavaScript for Bootstrap (including Popper) -->
+
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Side Panel -->
+        <nav class="side-panel">
+            <h2>Profit Pulse</h2>
+            <button onclick="showPage('dashboard')" class="active">
+                <span class="icon">🏠</span> Dashboard
+            </button>
+            <button onclick="window.location.href='http://localhost:5173/chat'">
+                <span class="icon">💬</span> Community
+            </button>
+            
+            <button onclick="window.location.href='http://localhost:5173/practice-zone'">
+                <span class="icon">📊</span> Practice Zone
+            </button>
+            <button onclick="showPage('tutorial')">
+                <span class="icon">📘</span> Tutorial
+            </button>
+            
+            <button onclick="window.location.href='http://localhost:5173/profile'">
+                <span class="icon">⚙️</span> Settings
+            </button>
+        </nav>
+        <!-- Main Content -->
+        <div class="content">
+            <header>
+                
+                <div class="header-right">
+                   
+                    <span class="icon">🔔</span>
+                    <span class="icon" onclick="window.location.href='http://localhost:5173/profile'">👤</span>
+                </div>
+            </header>
+
+            <!-- Dashboard Page -->
+            <div id="dashboard" class="page active">
+                <div class="dashboard-content">
+                    
+                    <iframe class="graph" src="http://localhost:8501"></iframe>
+                    <!-- News Cards Section -->
+                    <div class="articles" id="news-cards">
+                        <div class="article-card">
+                            <h3 id="news-title-1">Loading news...</h3>
+                            <p id="news-desc-1">Loading description...</p>
+                            <p><a id="news-link-1" href="#" target="_blank">Read more</a></p>
+                        </div>
+                        <div class="article-card">
+                            <h3 id="news-title-2">Loading news...</h3>
+                            <p id="news-desc-2">Loading description...</p>
+                            <p><a id="news-link-2" href="#" target="_blank">Read more</a></p>
+                        </div>
+                        <div class="article-card">
+                            <h3 id="news-title-3">Loading news...</h3>
+                            <p id="news-desc-3">Loading description...</p>
+                            <p><a id="news-link-3" href="#" target="_blank">Read more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tutorial" class="page">
+                <h2 class="section-title">Tutorial Section</h2>
+                <div class="card-container">
+                    <!-- Daily Investment Tip -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h2>Daily Investment Tip</h2>
+                                <p id="investment-tip">Loading...</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>More Info</h2>
+                                <p id="investment-tip-info">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Question of the Day -->
+                    <!-- Question of the Day -->
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <h2>Question of the Day</h2>
+            <div id="question-content">Loading...</div>
+        </div>
+        <div class="flip-card-back">
+            <h2>and your options are...!!</h2>
+            <div id="question-options">Loading...</div>
+            
+            <!-- Feedback Message Scoped to This Card -->
+            <div id="feedback-message" class="feedback hidden">
+                <h2 id="feedback-title"></h2>
+                <p id="feedback-points"></p>
+            </div>
+            <div id="coin" class="coin hidden"></div>
+        </div>
+    </div>
+</div>
+
+            
+                    <!-- Word of the Day -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h2>Word of the Day</h2>
+                                <div id="word-content">Loading...</div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Definition</h2>
+                                <p id="word-definition">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Fact of the Day -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h2>Fact of the Day</h2>
+                                <p id="fact-content">Loading...</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>More Info</h2>
+                                <p id="fact-info">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="section-title">Recommended Resources</h2>
+    <div class="resource-cards">
+        <div class="resource-card">
+            <img src="https://img.youtube.com/vi/by9_zHQzeZk/0.jpg" alt="Video Thumbnail">
+            <h3>Understanding Stock Market Basics</h3>
+            <a href="https://www.youtube.com/watch?v=by9_zHQzeZk" target="_blank">Watch on YouTube</a>
+        </div>
+        <div class="resource-card">
+            <img src="https://img.youtube.com/vi/GAWIFDoaLDI/0.jpg" alt="Video Thumbnail">
+            <h3>Guide to Financial Independence</h3>
+            <a href="https://www.youtube.com/watch?v=GAWIFDoaLDI" target="_blank">Watch on YouTube</a>
+        </div>
+        <div class="resource-card">
+            <img src="https://img.youtube.com/vi/0y5Ns76GZ4U/0.jpg" alt="Video Thumbnail">
+            <h3>Investing Strategies for Beginners</h3>
+            <a href="https://www.youtube.com/watch?v=0y5Ns76GZ4U" target="_blank">Watch on YouTube</a>
+        </div>
+    </div>
+            </div>
+            
+    
+     
+            
+<!-- Account Page -->
+<div id="account" class="page">
+    <h1>Account</h1>
+    <div class="balance-card">
+        <h2>Your Points Balance</h2>
+        <p id="points-balance">0 points</p>
+    </div>
+</div>
+
+
+    <script>
+        // Function to Show and Hide Pages
+        function showPage(pageId) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    // Show the selected page
+    document.getElementById(pageId).classList.add('active');
+    
+    // Remove 'active' class from all buttons
+    document.querySelectorAll('.side-panel button').forEach(button => {
+        button.classList.remove('active');
+    });
+    // Add 'active' class to the clicked button
+    document.querySelector(`button[onclick="showPage('${pageId}')"]`).classList.add('active');
+}
+
+    
+        // News Loading Functionality
+        async function loadNews() {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/api/news');
+                const news = await response.json();
+    
+                for (let i = 0; i < news.length; i++) {
+                    document.getElementById(`news-title-${i + 1}`).innerText = news[i].title;
+                    document.getElementById(`news-desc-${i + 1}`).innerText = news[i].description;
+                    document.getElementById(`news-link-${i + 1}`).href = news[i].link;
+                }
+            } catch (error) {
+                console.error("Error fetching news:", error);
+            }
+        }
+    
+        // Call loadNews only once to populate the news section
+        loadNews();
+    </script>
+    <div id="feedback-message" class="feedback hidden">
+        <h2 id="feedback-title"></h2>
+        <p id="feedback-points"></p>
+    </div>
+    <div id="coin" class="coin hidden"></div>
+   
+    <audio id="correct-sound" src="correct.mp3"></audio>
+<audio id="incorrect-sound" src="wrong.mp3"></audio>
+
+
+
+</body>
+</html>
